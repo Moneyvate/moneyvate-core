@@ -26,6 +26,7 @@ gem "title"
 gem "uglifier"
 gem "unicorn"
 gem "haml"
+gem "foundation-rails"
 
 group :development do
   gem "spring"
