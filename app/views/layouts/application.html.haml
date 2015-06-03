@@ -3,16 +3,22 @@
   %head
     %meta{ charset: 'utf-8' }
     %meta{ name: :ROBOTS, content: :NOODP }
-    %meta{ name: :viewport, content: 'initial-scale=1' }
+    %meta{ name: :viewport, content: 'width=device-width, initial-scale=1.0' }
     /
       Configure default, controller, and view-specific titles in config/locales/en.yml.
       
       For more info, see:
       https://github.com/calebthompson/title#usage
-    %title= title
-    = stylesheet_link_tag :application, media: :all
+    - if content_for?(:page_title)
+      %title= "#{title} | #{yield(:page_title)}"
+    - else
+      %title= title
+    = stylesheet_link_tag :application
     = csrf_meta_tags
-  %body{class: body_class }
     = render 'flashes'
+    = javascript_include_tag 'vendor/modernizr'
+    = javascript_include_tag :application, data: { 'turbolinks-track' => true }
+
+  %body{ class: body_class }
     = yield
-    = render 'javascript'
+
