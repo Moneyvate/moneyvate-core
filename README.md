@@ -1,5 +1,8 @@
 # Moneyvate-core
 
+[![Build Status](https://travis-ci.org/Moneyvate/moneyvate-core.svg?branch=master)](https://travis-ci.org/Moneyvate/moneyvate-core)
+[![Code Climate](https://codeclimate.com/github/Moneyvate/moneyvate-core/badges/gpa.svg)](https://codeclimate.com/github/Moneyvate/moneyvate-core)
+
 ## Getting Started
 
 After you have cloned this repo, run this setup script to set up your machine
